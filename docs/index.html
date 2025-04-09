@@ -16,7 +16,7 @@
       <div class="header_container">
         <h1 class="logo"><a href=""><img src="imges/logo.svg" alt="ACE PLANET"></a></h1>
         <ul class="nav">
-          <li><a href="#page-1" class="active">Home</a></li>
+          <li class="active"><a href="#page-1">Home</a></li>
           <li><a href="#page-2">옵티바이즈&#40;SSP&#41;</a></li>
           <li><a href="#page-2">알파엠&#40;DSP&#41;</a></li>
           <li><a href="#page-3">Login</a></li>
@@ -26,25 +26,66 @@
 		</header>
 		
 		<main>
-			<section data-anchor="Page 1">
-				<div class="text">
-					<h1>Turn your web page into a fullscreen scrolling presentation.</h1>
-					<div class="scroller">
-						<small>Scroll down or swipe up.</small>
-					</div>
+			<section data-anchor="Page 1" class="sec1">
+        <div class="text">
+          <div class="sec1_vod">
+            <video src="imges/sec1_vod.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="title">
+            <h3 class="h3q">성과는 숫자로, 차이는 기술로! 에이스다운 비전을 증명합니다</h3>
+            <h2 class="h2q">BEYOND VISION!</h2>
+            <div class="scroller">
+              <div class="tip">SCROLL DOWN</div>
+            </div>
+          </div>
 				</div>
 			</section>
-			<section data-anchor="Page 2">
+			<section data-anchor="Page 2" class="sec2">
 				<div class="text">
-				asdfasdf
+          <div class="d_fx">
+            <div class="del">
+              <div class="title">
+                <h3 class="h3q ahtoer">광고 시장을 움직이는 기술, 그 중심에 에이스플래닛이 있습니다</h3>
+                <h2 class="h2q">ABOUT<br><span>ACEPLANET</span></h2>
+              </div>
+              <p class="textq word_keep">에이스플래닛은 수익 최적화 SSP ‘Optivize’와 성과 중심 DSP ‘AlphaM’ 를 보유한 국내 대표 애드테크 기업입니다 광고 효율과 수익 향상을 위해 필요한 모든 기술을 직접 설계하고, AI 자동화·실시간 입찰·품질 제어까지 광고의 본질에 집중하는 에이스다운 기술력으로 증명합니다.</p>
+            </div>
+            <div class="sel">
+              <div class="img_box"><img src="imges/sec2_img.png" alt=""></div>
+            </div>
+          </div>
 				</div>
 			</section>
-			<section data-anchor="Page 3">
-				<div class="text">
-		
+			<section data-anchor="Page 3" class="sec3">
+        <div class="text">
+          <div class="img_box"><img src="imges/sec3_img.png" alt=""></div>
+          <div class="title">
+            <h2 class="h2q"><span>Our Vision,</span><br> Goals & Values</span></h2>
+            <div class="history">
+              <ul class="title">
+                <li>Identity</li>
+                <li>Strength</li>
+                <li>Core Solution</li>
+              </ul>
+              <ul class="title">
+                <li>
+                  광고 수익 최대화 실현<br>
+                  급변하는 AD TECH 트랜드 반영, 지속적인 연구 개발을 통한 ACE 만의 최고 솔루션 제공
+                </li>
+                <li>
+                  자동화 기반 최적화 ADX 솔루션<br>
+                  국내외 수천 개 매체 군 보유, 최적의 FILL-RATE와 국내 최고의 고품질 광고 SSP 플랫폼
+                </li>
+                <li>
+                  <span>Optivize, AlphaM</span>
+                  ACE만의 수년간 축적해온 진보된 BIG DATA 통한 최적의 광고 송출 솔루션
+                </li>
+              </ul>
+            </div>
+          </div>
 				</div>
 			</section>
-			<section data-anchor="Page 5">
+			<section data-anchor="Page 4">
 				<div class="text">
 					<h2>Control</h2>
 					<pre class="language-js"><code>const pages = new Pageable("#container");
@@ -65,7 +106,7 @@ pages.scrollToAnchor("#page-3");
 pages.orientate("horizontal");</code></pre>
 				</div>
 			</section>
-			<section data-anchor="Page 6">
+			<section data-anchor="Page 5">
 				<div class="text">
 					<h2>Listen</h2>
 					<pre class="language-js"><code>const pages = new Pageable("#container");
