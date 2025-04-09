@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var anchors = document.querySelectorAll(".anchors ul li a");
+  var header = document.querySelectorAll(".header ul li a");
   var pageable = new Pageable("main", {
       animation: 400,
       onInit: updateAnchorColor,
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateAnchorColor(data) {
       var index = data.index + 1;
       var isEven = index % 2 === 0;
-      anchors.forEach(anchor => {
+      header.forEach(anchor => {
           anchor.style.transition = "color 0.2s ease"; // 부드러운 전환
           anchor.style.color = isEven ? "#000" : "#fff";
       });

@@ -1,6 +1,6 @@
 'use strict';
 
-var anchors = [].slice.call(document.querySelector(".anchors").firstElementChild.children);
+var header = [].slice.call(document.querySelector(".header").firstElementChild.children);
 var listeners = ['init', 'update', 'scroll.before', 'scroll.start', 'scroll', 'scroll.end'];
 var list = document.getElementById("listeners");
 var toggle = document.getElementById("settings-open");
@@ -21,7 +21,7 @@ var pageable = new Pageable("main", {
 function update(data) {
 	var that = this;
 	selects[0].value = this.index + 1;
-	selects[1].value = this.anchors[this.index];
+	selects[1].value = this.header[this.index];
 	selects[2].value = this.horizontal ? "horizontal" : "vertical";
 
 	document.getElementById("wheel").checked = this.events.wheel;
@@ -30,7 +30,7 @@ function update(data) {
 	document.getElementById("keydown").checked = this.events.keydown;
 	document.getElementById("freescroll").checked = this.config.freeScroll;
 
-	anchors.forEach(function (anchor, i) {
+	header.forEach(function (anchor, i) {
 		anchor.firstElementChild.classList.toggle("active", i === that.index);
 	});
 }
@@ -165,7 +165,7 @@ function init() {
 			select.onchange = function (e) {
 				that.scrollToPage(e.target.value);
 	
-				selects[1].value = that.anchors[e.target.value - 1];
+				selects[1].value = that.header[e.target.value - 1];
 			};
 		} else if (select.id === "scrollToAnchor") {
 			that.pages.forEach(function (page, i) {
@@ -176,7 +176,7 @@ function init() {
 			select.onchange = function (e) {
 				that.scrollToAnchor(e.target.value);
 	
-				selects[0].value = that.anchors.indexOf(e.target.value) + 1;
+				selects[0].value = that.header.indexOf(e.target.value) + 1;
 			};
 		} else if (select.id === "orientate") {
 	
