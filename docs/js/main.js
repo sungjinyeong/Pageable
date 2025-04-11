@@ -1,18 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var header = document.querySelectorAll(".header ul li a");
-  var pageable = new Pageable("main", {
+    const headerLinks = document.querySelectorAll(".header ul li a");
+  
+    const sectionColors = [
+      "#ffffff", // Page 1
+      "#000000", // Page 2
+      "#ffffff", // Page 3
+      "#000000", // Page 4
+      "#ffffff", // Page 5
+      "#000000", // Page 6
+      "#ffffff", // Page 7
+      "#ffffff", // Page 8
+      "#000000", // Page 9
+      "#000000"  // Page 10
+    ];
+  
+    const pageable = new Pageable("main", {
       animation: 400,
-      onInit: updateAnchorColor,
-      onStart: updateAnchorColor,  // 스크롤 시작할 때 색상 변경
-      onFinish: updateAnchorColor  // 스크롤 종료 후에도 색상 유지
-  });
-
-  function updateAnchorColor(data) {
-      var index = data.index + 1;
-      var isEven = index % 2 === 0;
-      header.forEach(anchor => {
-          anchor.style.transition = "color 0.2s ease"; // 부드러운 전환
-          anchor.style.color = isEven ? "#000" : "#fff";
+      onInit: updateHeader,
+      onStart: updateHeader,
+      onFinish: updateHeader
+    });
+  
+    function updateHeader(data) {
+      const index = data.index;
+      const currentColor = sectionColors[index] || "#ffffff";
+  
+      headerLinks.forEach(link => {
+        const li = link.closest("li");
+        if (!li.classList.contains("active")) {
+          link.style.color = currentColor;
+        }
       });
-  }
-});
+  
+      const whiteLogo = document.querySelector(".logo img.wh_logo");
+      const redLogo = document.querySelector(".logo img.rd_logo");
+  
+      if (whiteLogo && redLogo) {
+        if (currentColor === "#000000") {
+          redLogo.style.opacity = "1";
+          whiteLogo.style.opacity = "0";
+        } else {
+          redLogo.style.opacity = "0";
+          whiteLogo.style.opacity = "1";
+        }
+      }
+    }
+  });
+  
