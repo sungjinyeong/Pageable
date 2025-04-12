@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#ffffff", // Page 7
       "#ffffff", // Page 8
       "#000000", // Page 9
-      "#000000"  // Page 10
+      "#000000",  // Page 10
+      "#000000"  // Page 11
     ];
   
     // 드래그 막기
