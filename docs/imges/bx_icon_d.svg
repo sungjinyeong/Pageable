@@ -1,0 +1,32 @@
+<svg id="그룹_70" data-name="그룹 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.732" height="58.934" viewBox="0 0 61.732 58.934">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_118" data-name="사각형 118" width="61.732" height="58.934" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="패스_69" data-name="패스 69" d="M127.831,23.292a13.964,13.964,0,0,0,7.182,12.21V21.467h5.314l-7.6-8.8a13.935,13.935,0,0,0-4.9,10.62" transform="translate(-127.831 -12.672)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-2.704" y1="2.435" x2="-2.683" y2="2.435" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#707070"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect id="사각형_116" data-name="사각형 116" width="10.045" height="12.688" transform="translate(0 46.246)" fill="#fff"/>
+  <rect id="사각형_117" data-name="사각형 117" width="10.045" height="38.065" transform="translate(15.332 20.869)" fill="#d90000"/>
+  <g id="그룹_65" data-name="그룹 65">
+    <g id="그룹_64" data-name="그룹 64" clip-path="url(#clip-path)">
+      <path id="패스_67" data-name="패스 67" d="M155.437,0a13.91,13.91,0,0,0-9.071,3.35l7.6,8.8h-5.314V26.18A13.97,13.97,0,1,0,155.437,0" transform="translate(-107.675)" fill="#fff"/>
+      <path id="패스_68" data-name="패스 68" d="M105.188,14.527a13.935,13.935,0,0,1,4.9-10.62L107.368.757,97.052,12.7h5.273V59.491H112.37V26.736a13.964,13.964,0,0,1-7.182-12.21" transform="translate(-71.397 -0.557)" fill="#fff"/>
+    </g>
+  </g>
+  <g id="그룹_67" data-name="그룹 67" transform="translate(33.791 3.35)">
+    <g id="그룹_66" data-name="그룹 66" clip-path="url(#clip-path-2)">
+      <rect id="사각형_119" data-name="사각형 119" width="12.496" height="22.83" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+  <g id="그룹_69" data-name="그룹 69">
+    <g id="그룹_68" data-name="그룹 68" clip-path="url(#clip-path)">
+      <rect id="사각형_120" data-name="사각형 120" width="10.045" height="25.641" transform="translate(46.524 33.293)" fill="#d90000"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg id="그룹_75" data-name="그룹 75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.901" height="49.761" viewBox="0 0 55.901 49.761">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_122" data-name="사각형 122" width="55.901" height="49.761" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="패스_75" data-name="패스 75" d="M21.86,84.753A8.743,8.743,0,0,0,30.6,93.427c.127,0,.252,0,.377-.01V84.753Z" transform="translate(-21.86 -84.753)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.348" y1="2.263" x2="-0.326" y2="2.263" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#707070"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <path id="패스_70" data-name="패스 70" d="M82.276,60.78,48,41.919V40.75L76.766,24.638l.945,1.679L51.057,41.4l32.148,17.69Z" transform="translate(-34.791 -17.858)" fill="#fff"/>
+  <g id="그룹_72" data-name="그룹 72" transform="translate(0)">
+    <g id="그룹_71" data-name="그룹 71" clip-path="url(#clip-path)">
+      <path id="패스_71" data-name="패스 71" d="M142.813,7.091a7.651,7.651,0,1,1-8.192-7.07,7.651,7.651,0,0,1,8.192,7.07" transform="translate(-92.436 0)" fill="#d90000"/>
+      <path id="패스_72" data-name="패스 72" d="M162.813,132.309a7.651,7.651,0,1,1-8.192-7.07,7.65,7.65,0,0,1,8.192,7.07" transform="translate(-106.932 -90.76)" fill="#d90000"/>
+      <path id="패스_73" data-name="패스 73" d="M39.343,61.465a8.744,8.744,0,0,0-17.489,0c0,.024,0,.047,0,.071h9.12V70.2a8.744,8.744,0,0,0,8.367-8.735" transform="translate(-15.84 -38.213)" fill="#d90000"/>
+      <path id="패스_74" data-name="패스 74" d="M6.016,84.753H0v18.988H15.135V93.417c-.125.006-.251.01-.377.01a8.743,8.743,0,0,1-8.742-8.674" transform="translate(0 -61.43)" fill="#fff"/>
+    </g>
+  </g>
+  <g id="그룹_74" data-name="그룹 74" transform="translate(6.016 23.323)">
+    <g id="그룹_73" data-name="그룹 73" clip-path="url(#clip-path-2)">
+      <rect id="사각형_123" data-name="사각형 123" width="12.47" height="12.54" transform="matrix(0.625, -0.781, 0.781, 0.625, -4.231, 5.289)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

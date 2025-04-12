@@ -81,6 +81,16 @@ new Swiper(".spon_swiper", {
     }
   }
 });
+// inside 스와이퍼퍼
+new Swiper(".inside_swiper", {
+  slidesPerView: 3,
+  grid: {
+    rows: 2,
+    fill: "row" // 가로 먼저 채움
+  },
+  loop: false,
+});
+
 
 
 // Input select 입력 가능 script
