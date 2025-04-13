@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀페이지 홈페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  /* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body 기본 설정 */
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 풀페이지 컨테이너 설정: 스크롤 스냅 적용 */
+.fullpage-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* 각 섹션의 기본 스타일 (부드러운 scale 효과 적용) */
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  transform: scale(0.95);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* active 클래스가 추가된 섹션은 제자리(1배) 크기로 확대 */
+.section.active {
+  transform: scale(1);
+}
+
+/* 섹션별 배경색 (필요에 따라 변경) */
+#section1 { background-color: #f8b195; }
+#section2 { background-color: #f67280; }
+#section3 { background-color: #c06c84; }
+#section4 { background-color: #6c5b7b; }
+
+/* 페이지네이션 스타일 */
+.pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  z-index: 1000;
+}
+
+.pagination li {
+  width: 12px;
+  height: 12px;
+  margin: 10px 0;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination li.active {
+  background-color: #333;
+}
+
+</style>
+<body>
+  <!-- 풀페이지 스크롤을 위한 컨테이너 -->
+  <div class="fullpage-container">
+    <section class="section" id="section1">
+      <h1>섹션 1</h1>
+      <p>첫 번째 섹션의 내용입니다.</p>
+    </section>
+    <section class="section" id="section2">
+      <h1>섹션 2</h1>
+      <p>두 번째 섹션의 내용입니다.</p>
+    </section>
+    <section class="section" id="section3">
+      <h1>섹션 3</h1>
+      <p>세 번째 섹션의 내용입니다.</p>
+    </section>
+    <section class="section" id="section4">
+      <h1>섹션 4</h1>
+      <p>네 번째 섹션의 내용입니다.</p>
+      <input type="text" value="" style="width: 100%;">
+    </section>
+  </div>
+
+  <!-- 오른쪽 페이지네이션 (도트) -->
+  <ul class="pagination">
+    <li data-index="0" class="active"></li>
+    <li data-index="1"></li>
+    <li data-index="2"></li>
+    <li data-index="3"></li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.fullpage-container');
+  const sections = document.querySelectorAll('.section');
+  const paginationItems = document.querySelectorAll('.pagination li');
+
+  // 스크롤 시 페이지네이션 active 업데이트
+  container.addEventListener('scroll', function() {
+    const index = Math.round(container.scrollTop / window.innerHeight);
+    paginationItems.forEach(item => item.classList.remove('active'));
+    if (paginationItems[index]) {
+      paginationItems[index].classList.add('active');
+    }
+  });
+
+  // 페이지네이션 클릭 시 해당 섹션으로 부드러운 스크롤 이동
+  paginationItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const index = parseInt(this.getAttribute('data-index'));
+      container.scrollTo({
+        top: index * window.innerHeight,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // IntersectionObserver를 이용하여 화면 내 보이는 섹션에 active 클래스 추가 (부드러운 scale 효과 적용)
+  const observerOptions = {
+    root: container,
+    threshold: 0.6
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+});
+
+</script>

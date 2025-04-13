@@ -1061,14 +1061,11 @@ section .text{
     display: block;
     height: 85%;
   }
-  .dummy_foonter{
-    height: 15%;
-  }
   .form_data .del{
-    height: 30%;
+    height: 20vh;
   }
   .form_data .sel{
-    height: 70%;
+    height: 60vh;
     position: relative;
     z-index: 20;
   }
@@ -1089,18 +1086,39 @@ section .text{
     pointer-events: auto !important; /* ← 반드시 있어야 함 */
   }
   .dummy_foonter{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 20vh;
+    gap: 10px;
+    padding-left: 2%;
   }
-  input, textarea, select, button {
-    touch-action: auto !important;
-    -webkit-user-select: text !important;
-    user-select: text !important;
-    pointer-events: auto !important;
+  .dummy_foonter .company_info li.copy{
+    padding-top: 10px;
   }
-  section, .text, .form_data, .form_data * {
-    pointer-events: auto !important;
-    -webkit-user-select: text !important;
-    user-select: text !important;
+  .form_data .del .textq{
+    display: none;
   }
+  .dummy_foonter .company_info li{
+    padding-bottom: 5px;
+  }
+/* 📌 반드시 최하단 CSS 파일에 추가 */
+input, textarea, select, button {
+  touch-action: auto !important;
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+  -webkit-touch-callout: default !important;
+  position: relative;
+  z-index: 10;
+}
+
+section, .text, .form_data, .form_data * {
+  touch-action: auto !important;
+  pointer-events: auto !important;
+  user-select: text !important;
+}
+
   
 }

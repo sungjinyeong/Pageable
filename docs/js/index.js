@@ -191,3 +191,8 @@ function init() {
 		}
 	}
 }
+
+document.querySelector('.form_data .sel form')
+  .addEventListener('touchstart', function(e) {
+    e.stopPropagation(); // 터치 이벤트가 부모(즉, Pageable)로 전파되지 않음
+  });
