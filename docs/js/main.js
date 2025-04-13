@@ -8,12 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "#ffffff", // Page 3
       "#000000", // Page 4
       "#ffffff", // Page 5
-      "#000000", // Page 6
-      "#ffffff", // Page 7
-      "#ffffff", // Page 8
+      "#ffffff", // Page 6
+      "#000000", // Page 7
+      "#000000", // Page 8
       "#000000", // Page 9
-      "#000000",  // Page 10
-      "#000000"  // Page 11
     ];
   
     // 드래그 막기
@@ -65,7 +63,6 @@ new Swiper(".spon_swiper", {
   navigation: false,
   pagination: false,
   allowTouchMove: true,
-  spaceBetween: 10,
   breakpoints: {
     1000: {
       slidesPerView: 5
@@ -81,15 +78,81 @@ new Swiper(".spon_swiper", {
     }
   }
 });
-// inside 스와이퍼퍼
-new Swiper(".inside_swiper", {
-  slidesPerView: 3,
-  grid: {
-    rows: 2,
-    fill: "row" // 가로 먼저 채움
-  },
-  loop: false,
+
+
+
+// 6리스트
+let insideSwiper = null;
+
+function initInsideSwiper() {
+  const ww = window.innerWidth;
+
+  if (ww < 1200) {
+    if (!insideSwiper) {
+      insideSwiper = new Swiper(".inside_swiper", {
+        slidesPerView: ww <= 500 ? 1 : 2,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    }
+  } else {
+    if (insideSwiper) {
+      insideSwiper.destroy(true, true);
+      insideSwiper = null;
+    }
+  }
+}
+
+window.addEventListener('load', initInsideSwiper);
+window.addEventListener('resize', initInsideSwiper);
+
+
+
+
+
+new Swiper(".keySwiper", {
+  loop: true,
+  spaceBetween: 20,
+  centeredSlides: false,
+  slidesPerView: 4,
+  slidesPerGroup: 1,
+  breakpoints: {
+    1000: {
+      slidesPerView: 4,
+      slidesPerGroup: 1,
+      centeredSlides: false
+    },
+    750: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      centeredSlides: true
+    },
+    500: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      centeredSlides: true
+    },
+    0: {
+      slidesPerView: 1.5,
+      slidesPerGroup: 1,
+      centeredSlides: true
+    }
+  }
 });
+
 
 
 
@@ -133,7 +196,7 @@ Pageable.prototype._start = function(e) {
 
 
 // input active style
-$(document).on('input', '.sec11 .sel .user_data li input, .sec11 .sel textarea', function () {
+$(document).on('input', '.sel .user_data li input, .sel textarea', function () {
   if ($(this).val().trim() !== '') {
     $(this).addClass('active');
   } else {
@@ -141,6 +204,6 @@ $(document).on('input', '.sec11 .sel .user_data li input, .sec11 .sel textarea',
   }
 });
 
-$(document).on('click', '.sec11 .sel .choice_list li', function () {
+$(document).on('click', '.sel .choice_list li', function () {
   $(this).addClass('active').siblings().removeClass('active');
 });

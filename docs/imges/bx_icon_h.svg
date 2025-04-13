@@ -1,0 +1,32 @@
+<svg id="그룹_107" data-name="그룹 107" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.729" height="57.282" viewBox="0 0 56.729 57.282">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_144" data-name="사각형 144" width="56.729" height="57.282" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="패스_96" data-name="패스 96" d="M54.08,44V59.8a13.976,13.976,0,0,0,10.075-6.169V44Z" transform="translate(-54.08 -44)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.987" y1="2.553" x2="-0.966" y2="2.553" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#707070"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect id="사각형_143" data-name="사각형 143" width="10.075" height="18.135" transform="translate(0.023 39.148)" fill="#3579ff"/>
+  <g id="그룹_102" data-name="그룹 102">
+    <g id="그룹_101" data-name="그룹 101" clip-path="url(#clip-path)">
+      <path id="패스_94" data-name="패스 94" d="M25.642,14.129v9.633a14.019,14.019,0,1,0-10.075,6.169v-15.8Z" transform="translate(0 -1.463)" fill="#3579ff"/>
+      <path id="패스_95" data-name="패스 95" d="M54.08,83.635v28.814H64.155V77.466A13.976,13.976,0,0,1,54.08,83.635" transform="translate(-38.513 -55.167)" fill="#3579ff"/>
+    </g>
+  </g>
+  <g id="그룹_104" data-name="그룹 104" transform="translate(15.567 12.665)">
+    <g id="그룹_103" data-name="그룹 103" clip-path="url(#clip-path-2)">
+      <rect id="사각형_145" data-name="사각형 145" width="13.858" height="17.888" transform="translate(-3.99 1.081) rotate(-15.164)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+  <g id="그룹_106" data-name="그룹 106">
+    <g id="그룹_105" data-name="그룹 105" clip-path="url(#clip-path)">
+      <rect id="사각형_146" data-name="사각형 146" width="10.075" height="57.282" transform="translate(31.111)" fill="#fff"/>
+      <rect id="사각형_147" data-name="사각형 147" width="10.075" height="32.527" transform="translate(46.655 24.755)" fill="#3579ff"/>
+    </g>
+  </g>
+</svg>
