@@ -162,8 +162,8 @@ Pageable.prototype._start = function(e) {
 
   if (this.scrolling || this.dragging) return false;
 
-  // 🛠 입력 필드에서 클릭은 무시하고 패스시킴
-  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(evt.target.tagName)) return;
+  // ✅ 입력 필드 클릭 무시 (막지 말 것)
+  if (['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON'].includes(evt.target.tagName)) return;
 
   if (e.type === "touchstart") {
     if (!this.events.touch) {
@@ -178,8 +178,7 @@ Pageable.prototype._start = function(e) {
 
   if (!evt.target.closest(this.config.childSelector)) return false;
 
-  this._preventDefault(e);  // ← 여전히 기타 요소는 막음
-
+  this._preventDefault(e);
   this.dragging = this.config.freeScroll;
 
   if (this.config.slideshow) this.slider.stop();
@@ -195,6 +194,7 @@ Pageable.prototype._start = function(e) {
 
 
 
+
 // input active style
 $(document).on('input', '.sel .user_data li input, .sel textarea', function () {
   if ($(this).val().trim() !== '') {
@@ -206,4 +206,14 @@ $(document).on('input', '.sel .user_data li input, .sel textarea', function () {
 
 $(document).on('click', '.sel .choice_list li', function () {
   $(this).addClass('active').siblings().removeClass('active');
+});
+
+
+new Pageable("main", {
+  animation: 400,
+  onFinish: function(data){
+    document.querySelectorAll("input, textarea").forEach(el => {
+      el.disabled = false;
+    });
+  }
 });

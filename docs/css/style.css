@@ -1069,6 +1069,8 @@ section .text{
   }
   .form_data .sel{
     height: 70%;
+    position: relative;
+    z-index: 20;
   }
   .form_data .sel form{
     width: 90%;
@@ -1083,4 +1085,22 @@ section .text{
   .form_data .del .h3q{
     padding-bottom: 5px;
   }
+  section, .text, .form_data{
+    pointer-events: auto !important; /* ← 반드시 있어야 함 */
+  }
+  .dummy_foonter{
+    display: block;
+  }
+  input, textarea, select, button {
+    touch-action: auto !important;
+    -webkit-user-select: text !important;
+    user-select: text !important;
+    pointer-events: auto !important;
+  }
+  section, .text, .form_data, .form_data * {
+    pointer-events: auto !important;
+    -webkit-user-select: text !important;
+    user-select: text !important;
+  }
+  
 }
